@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="icon" href="Images/Zomato_logo.png">
+    <script src="https://fontawesome.com/icons" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>zomato</title>
+    <style>
+    body{
+        margin: 0;
+        padding:0;
+    }
+    .header{
+        width:100%;
+        height:70vh;
+        overflow:hidden;
+        object-fit: cover;
+    }
+    .header-image{
+        background-image: url("C:/Users/KEERTHANA/Documents/spotknack/css/headimage.jpeg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 450px;
+    }
+    .nav{
+        display:flex;
+        margin: 0;
+        list-style: none;
+        justify-content: space-between;
+        color: white;
+        font-size: 1em;
+        font-family:Verdana, Geneva, Tahoma, sans-serif ;
+        padding-left: 100px;
+        padding-top: 30px;
+    }
+    .nav-bar{
+        display: flex;
+    }
+    .nav-bar li{
+        font-size: 1em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: lighter;
+        padding-left: 30px;
+        padding-right: 70px;
+        list-style: none;
+    }
+    .head{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 7vh;
+        align-items: center;
+    }
+    .logo{
+        width: 20vw;
+    }
+    .head h3{
+        font-size: 2.1em;
+        color: whitesmoke;
+        font-weight: lighter;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .search{
+        display: flex;
+        width: 55vw;
+        align-items: center;
+        justify-content: flex-start;
+        border-radius: 10px;
+        background-color:white;
+        padding: 5px 0;
+    }
+    .search input{
+        outline: none;
+        border: none;
+        width: 50%;
+        padding-left: 10px;
+        font-size: 15px;
+    }
+    .search p{
+        color: gray;
+        border-right: 1px solid gray;
+        font-family: 15px;
+        padding-right: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .search i:first-child{
+        color: red;
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .search i{
+        color: gray;
+        padding-left: 10px;
+        
+    }
+    .sec-1{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 13vh;
+    }
+    .box{
+        position: relative;
+        width: 265px;
+        margin: 3px 5px;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 1px 2px gray;
+        background-color: rgb(243,240,240);
+    }
+    .box img{
+        width: 100%;
+        border-radius: 15px;
+        border: 1px solid gray;
+        z-index: -1;
+    }
+    .white{
+        position: absolute;
+        bottom: 3px;
+        align-items: center;
+        background-color:white;
+        border-radius: 0 0 15px 15px;
+        width: 100%;
+        height: 25%;
+        z-index: -1;
+    }
+    .white p{
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1em;
+        color: rgb(56,56,56);
+        letter-spacing: 0.7px;
+    }
+    .middle,.end{
+        margin:60px 150px;
+    }
+    .sec-2 h2{
+         font-size:2.7rem;
+         font-weight:lighter;
+         margin-bottom: 10px;
+    }
+    .sec-2 div{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .sec-2 h6{
+        margin:0;
+        font-size:1rem;
+        font-weight: lighter;
+        color:rgb(99,98,98);
+    }
+    .fa-caret-right,.sec-2 span{
+        color:rgb(248,117,117)
+    }
+    .box-1{
+        width:255px;
+        height:300px;
+        overflow:hidden;
+        position:relative;
+        border-radius: 8px;
+    }
+    .box-1 div{
+        position: absolute;
+        background: linear-gradient(transparent,black);
+        width: 100%;
+        height:25%;
+        display:flex;
+        align-items: flex-end;
+        bottom:0;
+    }
+    .box-1 div span:first-child{
+        display: inline-block;
+        color: white;
+        padding-left: 15px;
+        font-size: 1rem;
+        padding-bottom:10px;
+    }
+    .box-1 i{
+        color: white;
+        padding-bottom: 5px;
+    }
+    box-1 img{
+        width:255px;
+        height:300px;
+        object-fit: cover;
+    }
+    sec-3{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        margin-bottom: 130px;
+    }
+    .middle h1{
+        font-size:2.1rem;
+        font-weight: lighter;
+        font-align:center;
+        margin: 50px;
+        color: rgb(56,56,56);
+    }
+    .sec-4{
+        display: grid;
+        justify-content: center;
+        grid-column-gap:20px;
+        grid-row-gap: 30px;
+        grid-template-columns: 340px 340px 340px;
+        grid-template-rows: auto;
+    }
+    .box-2{
+        border:1px solid rgb(235,233,233);
+        box-shadow:0 1px 3px rgb(226,223,223);
+        width:340px;
+        height:60px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    .box-2 div{
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin:20px;
+    }
+    .box-2 div span{
+        color:rgb(65,64,64);
+        font-size: 1.2rem;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space:nowrap;
+    }
+    .sec-5{
+        display: flex;
+        margin: 90px 0;
+        padding: 40px 0;
+        justify-content: center;
+        background-color: white;
+    }
+    .flex{
+        display:flex;
+    }
+    .contact{
+        width: 760px;
+        overflow: hidden;
+    }
+    .contact-img{
+        width:250px;
+        height: 450px;
+        padding-right: 40px;
+    }
+    .address{
+        width:470px;
+        margin-top: 20px;
+        padding-left: 10px;
+    }
+    .address p{
+        padding-bottom: 10px;
+        font-size: 0.95rem;
+        color:rgb(92,91,91);
+    }
+    .address h2{
+        font-size: 2.7rem;
+        font-weight: lighter;
+        margin-bottom: 20px;
+        color: rgb(34,34,34);
+    }
+    .radio{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 230px;
+        padding-bottom: 20px;
+    }
+    .radio label{
+        font-size: 1.1rem;
+        color: black;
+    }
+    .radio{
+        position:relative;
+    }
+    .email input{
+        height: 46px;
+        border-radius: 5px;
+        width: 270px;
+        border: 1px solid white;
+        outline: red;
+        font-size: 1.3rem;
+        padding-left: 15px;
+    }
+    .place{
+        position: absolute;
+        font-size: 1.3rem;
+        left:15px;
+        top:13px;
+        color: gray;
+        font-weight: lighter;
+    }
+    .email button{
+        width:150px;
+        border-radius: 6px;
+        border: 1px solid rgb(253,104,104);
+        background-color: rgb(248,104,104);
+        font-size: 1.1rem;
+        margin-left: 6px;
+        color: white;
+    }
+    .download{
+        font-size: 0.7rem;
+        margin-top: 27px;
+        margin-bottom: 0;
+        color: gray;
+    }
+    .appimg{
+        width: 137px;
+        height:40px;
+    }
+    .sec-6{
+        margin-bottom: 110px;
+    }
+    .sec-6 h1{
+        font-size: 1.9rem;
+        font-weight: lighter;
+        color: rgb(31,31,31);
+    }
+    .sec-6 h4{
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+        font-weight: lighter;
+        color: rgb(31,31,31);
+    }
+    .sec-6 a{
+        text-decoration: none;
+        color: gray;
+        font-size: 00.95rem;
+    }
+    sec-6 i{
+        font-size: 0.3rem;
+        padding: 6px 5px;
+        color: gray;
+    }
+    .end-column{
+        width: 190px;
+        font-size: 1rem;
+        font-weight: lighter;
+        display: inline-block;
+        margin:15px 0;
+    }
+    .first img{
+    width: 128px;
+    height: 32px;
+}
+.sec-7{
+    padding: 40px 120px;
+    background-color: rgb(244,244,253);
+}
+.first{
+    display: flex;
+    justify-content: space-between;
+
+}
+.first-1{
+    display: flex;
+}
+.first-1 span{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 20px;
+    font-weight: 400 ;
+}
+.second{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+.second div{
+    width: 200px;
+}
+.second h4{
+    font-weight: lighter;
+    white-space: nowrap;
+    color: rgb(22,22,22);
+}
+.second a{
+    display: inline-block;
+    width: 200px;
+    margin-bottom: 7px;
+    white-space: nowrap;
+    text-decoration: none;
+    color: gray;
+    font-size: 0.9rem;
+}
+.second img{
+    width: 137px;
+    height: 40px;
+    margin-top: 11px;
+    cursor: pointer;
+}
+.box-4{
+    display: flex;
+    flex-direction: column;
+}
+.box-4 i{
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+    </style>
+    <body>
+<header>
+    <div class="header-image">
+        <div class="nav">
+        <div>
+            <h4>Get the App</h4>
+        </div>
+        <u1 class="nav-bar">
+            <li>add resturant</li>
+            <li><a href="login.html"style="color:white;">login</a></li>
+            <li><a href="signup.html"style="color:white;">signup</a></li>
+        </u1>
+    </div>
+    <div class="head">
+        <img class="logo" src="C:/Users/KEERTHANA/Documents/spotknack/css/zomato2.jpeg"><br><br>
+        <h3>Discover the best food & drinks in coimbatore</h3><br><br>
+        <div class="search">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>coimbatore</p>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="search for resturant,cuisine or a dish">
+        </div>
+        </div>
+    </div>
+</header>
+   <section class="sec-1">
+    <div class="box">
+        <div class="white"><span>order online</span></p></div>
+        <img src="C:/Users/KEERTHANA/Documents/spotknack/css/g1.jpeg">
+    </div>
+    <div class="box">
+        <div class="white"><span>Dining</span></div>
+        <img src="C:/Users/KEERTHANA/Documents/spotknack/css/g2.jpeg">
+    </div>
+   </section>
+   <section class="middle">
+    <div class="sec-2">
+        <h2>Collections</h2>
+        <div>
+            <h6>
+                Explore curated lists of top resturants,cafes,pubs and bars in coimbatore based on trends
+            </h6>
+            <span>All collections in coimbatore<i class="fa-solid fa-caret-right"></i></span>
+        </div>
+    </div>
+    <div class="sec-3">
+        <div class="row">
+        <div class="box-1">
+            <div><span>Veggie Friendly <br>9 places</span><i class="fa-solid fa-caret-right"></i></div>
+            <img src="C:/Users/KEERTHANA/Documents/spotknack/css/veggie friendly.jpg">
+        </div>
+        <div class="box-1">
+            <div><span>Sweet Tooth <br>8 places</span><i class="fa-solid fa-caret-right"></i></div>
+            <img src="C:/Users/KEERTHANA/Documents/spotknack/css/sweet tooth.jpeg">
+        </div>
+        </div>
+        <div class="row">
+        <div class="box-11">
+            <div><span>Great Cafes<br>6 places</span><i class="fa-solid fa-caret-right"></i></div>
+            <img src="C:/Users/KEERTHANA/Documents/spotknack/css/great cafe.jpg">
+        </div>
+        <div class="box-11">
+            <div><span>Great Buffets<br>9 places</span><i class="fa-solid fa-caret-right"></i></div>
+            <img src="C:/Users/KEERTHANA/Documents/spotknack/css/g5.jpeg">
+        </div>
+    </div>
+    </div>
+    <h1>Popular localities in and around coimbatore</h1>
+    <div class="sec-4">
+        <div class="box-2">
+        <div><span>RS Puram<br>394 places</span></div>
+        </div>
+        <div class="box-2">
+            <div><span>Saibaba colony<br>283 places</span></div>
+            </div>
+            <div class="box-2">
+                <div><span>Ramanathapuram<br>215 places</span></div>
+                </div>
+                <div class="box-2">
+                    <div><span>Peelamedu<br>577 places</span></div>
+                    </div>
+                    <div class="box-2">
+                        <div><span>Gandhipuram<br>302 places</span></div>
+                        </div>
+                        <div class="box-2">
+                            <div><span>Kalapatti<br>83 places</span></div>
+                            </div>
+                            <div class="box-2">
+                                <div><span>Race Course<br>131 places</span></div>
+                                </div>
+                                <div class="box-2">
+                                    <div><span>Town Hall<br>165 places</span></div>
+                                    </div>
+                                    <div class="box-2">
+                                        <div><span><center>See more</center></span></div>
+                                        </div>
+    </div>
+   </section>
+   <section class="sec-5">
+    <div class="flex contact">
+        <img src="C:Users/KEERTHANA/Documents/spotknack/css/mobile">
+        <div class="address">
+            <h2>Get the zomato App</h2>
+            <p>We will send you a link,open it on your phone to download the app</p>
+            <div class="flex radio">
+                <div>
+                    <input type="radio"name="fill" id="email"checked>
+                   <label for="email">Email</label>
+                </div>
+                <div>
+                    <input type="radio"name="fill" id="phone" checked>
+                    <label for="phone">Phone</label>
+                </div>
+            </div>
+            <div class="flex email">
+                <input class="input" type="text">
+                <label for="" class="place">Email</label>
+                <button>Share App Link</button>
+            </div>
+            <p class="download">Download App from</p>
+            <div class="flex app">
+                <img src="C:/Users/KEERTHANA/Documents/spotknack/css/google play">
+                <img src="C:/Users/KEERTHANA/Documents/spotknack/css/app store">
+            </div>
+        </div>
+    </div>
+   </section>
+   <section class="end">
+    <div class="sec-6">
+        <h1>Explore options near me</h1>
+        <h4>Popular cuisines near me</h4>
+        <div>
+            <a href="#">Bakery food near me</a>
+            <i class="fas fa-circle"></i>
+            <a href="#">Beverage food near me</a>
+            <i class="fas fa-circle"></i>
+            <a href="#">Biriyani food near me</a>
+            <i class="fas fa-circle"></i>
+            <a href="#">Desserts near me</a>
+            <i class="fas fa-circle"></i>
+            <a href="#">Continental food near me</a>
+            <i class="fas fa-circle"></i>
+        </div>
+    </div>
+    <div class="sec-6">
+        <h4>Popular resturants near me</h4>
+        <div>
+            <a href="#">Bakery food near me</a>
+            <i class="fas fa-circle"></i>
+            <a href="#">Beverage food near me</a>
+            <i class="fas fa-circle"></i>
+            <a href="#">Biriyani food near me</a>
+            <i class="fas fa-circle"></i>
+            <a href="#">Desserts near me</a>
+            <i class="fas fa-circle"></i>
+            <a href="#">Continental food near me</a>
+            <i class="fas fa-circle"></i>
+        </div>
+    </div>
+    <div class="sec-6">
+        <h4>Top resturant chains</h4>
+        <div class="end-column">
+            <a href="#">Domino's</a>
+            <a href="#">Burger king</a>
+            <a href="#">Pizza Hut</a>
+            <a href="#">Biriyani blues</a>
+            <a href="#">krispy kreme</a>
+        </div>
+    </div>
+    <div class="sec-6">
+        <h4>Cities we deliver to</h4>
+        <div class="end-column">
+            <a href="#">Gandhinagar</a>
+            <a href="#">Saibaba colony</a>
+            <a href="#">Ramanathapuram</a>
+            <a href="#">Pollachi</a>
+            <a href="#">Achipatti</a>
+        </div>
+    </div>
+   </section>
+   <section class="footer">
+    <div class="sec-7">
+        <div class="first">
+            <div>
+                <img src="C:/Users/KEERTHANA/Documents/spotknack/css/zomato5.jpeg">
+            </div>
+            <div class="first-1">
+                <div>
+                    <span>India</span>
+                </div>
+                <div>
+                    <span>English</span>
+                </div>
+            </div>
+        </div>
+        <div class="second">
+            <div>
+                <h4>ABOUT ZOMATO</h4>
+                <a href="#">Who we are</a>
+                <a href="#">Blog</a>
+                <a href="#">work with us</a>
+                <a href="#">Report fraud</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Investers Relations</a>
+            </div>
+            <div>
+                <h4>ZOMAVERSE</h4>
+                <a href="#">Code of conduct</a>
+                <a href="#">Community</a>
+                <a href="#">Blogger Help</a>
+                <a href="#">Moblie App</a>
+            </div>
+            <div>
+                <h4>FOR RESTAURANTS</h4>
+                <a href="#">partner with us</a>
+                <a href="#">Apps for you</a>
+                <h4>FOR ENTERPRISES</h4>
+                <a href="#">Zomato for work</a>
+            </div>
+            <div>
+                <h4>LEARN MORE </h4>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Secruity</a>
+                <a href="#">Sitemap</a>
+            </div>
+            <div class="box-4">
+                <h4>SOCIAL LINKS</h4>
+                <div>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</html>
